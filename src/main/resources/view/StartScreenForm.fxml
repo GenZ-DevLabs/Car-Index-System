@@ -1,11 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.genzdevlabs.controller.StartScreenForm">
+<AnchorPane prefHeight="429.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.genzdevlabs.controller.StartScreenForm">
    <children>
-      <JFXButton layoutX="199.0" layoutY="135.0" prefHeight="130.0" prefWidth="202.0" />
+      <JFXButton fx:id="btnAddCar" alignment="CENTER" buttonType="RAISED" layoutX="214.0" layoutY="138.0" onAction="#btnAddCarOnAction" prefHeight="60.0" prefWidth="240.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="ADD CAR">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSearchCar" alignment="CENTER" buttonType="RAISED" layoutX="214.0" layoutY="227.0" onAction="#btnSearchCarOnAction" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="SEARCH CAR">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSearchCar" alignment="CENTER" buttonType="RAISED" layoutX="214.0" layoutY="316.0" onAction="#btnSearchCarOnAction" prefHeight="60.0" prefWidth="240.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="SHOW ALL CARS">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="208.0" layoutY="85.0" prefHeight="29.0" prefWidth="252.0" text="Car Index System">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="294.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/car.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="62.0" layoutX="330.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" rotate="-5.0">
+         <image>
+            <Image url="@../assets/tool.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

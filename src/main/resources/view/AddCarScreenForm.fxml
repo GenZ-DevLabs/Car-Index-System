@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addVehicleApane" prefHeight="370.0" prefWidth="559.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.genzdevlabs.controller.AddCarScreenForm">
+    <AnchorPane layoutX="18.0" layoutY="14.0" prefHeight="310.0" prefWidth="528.0" style="-fx-background-color: #E3E3E3;">
+        <Label alignment="CENTER" layoutX="137.0" layoutY="35.0" prefHeight="29.0" prefWidth="286.0" text="ADD VEHICLE TO THE SYSTEM">
+            <font>
+                <Font name="Calibri Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="32.0" layoutY="74.0" prefHeight="19.0" prefWidth="62.0" text="Brand">
+            <font>
+                <Font name="Calibri Bold" size="12.0" />
+            </font>
+        </Label>
+      <TextField fx:id="txtBrand" layoutX="32.0" layoutY="93.0" prefHeight="25.0" prefWidth="220.0" promptText="brand">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="280.0" layoutY="74.0" prefHeight="19.0" prefWidth="62.0" text="Model">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtModel" layoutX="280.0" layoutY="93.0" prefHeight="25.0" prefWidth="220.0" promptText="model">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="32.0" layoutY="133.0" prefHeight="19.0" prefWidth="96.0" text="Registration No.">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textReg" layoutX="32.0" layoutY="152.0" prefHeight="25.0" prefWidth="220.0" promptText="reg no">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="280.0" layoutY="133.0" prefHeight="19.0" prefWidth="62.0" text="Year">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textYear" layoutX="280.0" layoutY="152.0" prefHeight="25.0" prefWidth="220.0" promptText="yyyy">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="32.0" layoutY="193.0" prefHeight="19.0" prefWidth="96.0" text="Fuel Type">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="comFuel" layoutX="32.0" layoutY="212.0" prefHeight="25.0" prefWidth="140.0" promptText="select fuel type" />
+      <Label layoutX="198.0" layoutY="202.0" prefHeight="19.0" prefWidth="62.0" text="Capacity">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textCapacity" layoutX="198.0" layoutY="221.0" prefHeight="25.0" prefWidth="163.0" promptText="capacity">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="393.0" layoutY="202.0" prefHeight="19.0" prefWidth="62.0" text="Colour">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textColour" layoutX="393.0" layoutY="221.0" prefHeight="25.0" prefWidth="106.0" promptText="colour">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnAddCar" buttonType="RAISED" layoutX="32.0" layoutY="259.0" onAction="#btnAddOnAction" prefHeight="35.0" prefWidth="468.0" style="-fx-background-color: white; -fx-background-radius: 8;" text="ADD CAR">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </JFXButton>
+    </AnchorPane>
+   <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="18.0" layoutY="333.0" onAction="#btnBackOnAction" prefHeight="23.0" prefWidth="83.0" style="-fx-background-color: white; -fx-background-radius: 8;" text="Back">
+      <font>
+         <Font name="Calibri Bold" size="16.0" />
+      </font>
+   </JFXButton>
+</AnchorPane>
