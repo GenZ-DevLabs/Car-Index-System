@@ -1,4 +1,5 @@
-package com.genzdevlabs.dto;
+package com.genzdevlabs.dto.tm;
+
 import lombok.*;
 
 @AllArgsConstructor
@@ -6,9 +7,8 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-@Data
 
-public class Car {
+public class CarTM {
     private String brand;
     private String model;
     private String reg;
@@ -16,5 +16,4 @@ public class Car {
     private String fuel;
     private String capacity;
     private String colour;
-
 }

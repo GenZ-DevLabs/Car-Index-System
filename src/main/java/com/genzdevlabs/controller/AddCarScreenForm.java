@@ -1,6 +1,7 @@
 package com.genzdevlabs.controller;
 
 import com.genzdevlabs.dto.Car;
+import com.genzdevlabs.dto.tm.CarTM;
 import com.genzdevlabs.model.CarModel;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
@@ -67,10 +68,10 @@ public class AddCarScreenForm implements Initializable {
         String model = txtModel.getText();
         String reg = textReg.getText();
         String year = textYear.getText();
-        String fueltype = (String) comFuel.getValue();
+        String fuelType = (String) comFuel.getValue();
         String capacity = textCapacity.getText();
         String colour = textColour.getText();
-        var customer = new Car(brand, model, reg, year, fueltype, capacity, colour);
+        var customer = new Car(brand, model, reg, year, fuelType, capacity, colour);
 
         try {
             boolean isSaved = CarModel.save(customer);

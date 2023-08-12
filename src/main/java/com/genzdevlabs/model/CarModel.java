@@ -2,7 +2,10 @@ package com.genzdevlabs.model;
 
 import com.genzdevlabs.db.DataBaseConnection;
 import com.genzdevlabs.dto.Car;
+import com.genzdevlabs.dto.tm.CarTM;
 import com.genzdevlabs.util.CrudUtil;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -48,18 +51,8 @@ public class CarModel {
 //        return CrudUtil.execute(sql, item);
 //    }
 
-    public static List<String> getCodes() throws SQLException {
-        Connection con = DataBaseConnection.getInstance().getConnection();
 
-        List<String> codes = new ArrayList<>();
 
-        String sql = "SELECT reg FROM caradd";
-        ResultSet resultSet = con.createStatement().executeQuery(sql);
-        while(resultSet.next()) {
-            codes.add(resultSet.getString(1));
-        }
-        return codes;
-    }
 //    public static boolean updateQty(List<CartDTO> cartDTOList) throws SQLException {
 //        for (CartDTO dto : cartDTOList) {
 //            if(!updateQty((List<CartDTO>) dto)) {
@@ -88,5 +81,27 @@ public class CarModel {
             );
         }
         return null;
+    }
+
+    public static List<String> search() throws SQLException {
+        Connection con = DataBaseConnection.getInstance().getConnection();
+
+        ObservableList<String> observableList = FXCollections.observableArrayList();
+
+        String sql = "SELECT model,brand,reg,year,fuel,capa,colour FROM addcar";
+        ResultSet resultSet = con.createStatement().executeQuery(sql);
+        while(resultSet.next()) {
+
+            String brand = resultSet.getString("model");
+            String model = resultSet.getString("brand");
+            String reg = resultSet.getString("reg");
+            String year = resultSet.getString("year");
+            String fuel = resultSet.getString("fuel");
+            String capa = resultSet.getString("capa");
+            String colour = resultSet.getString("colour");
+
+            observableList.add(String.valueOf(new Car(brand,model,reg,year,fuel,capa,colour)));
+        }
+        return observableList;
     }
 }
