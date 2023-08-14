@@ -1,15 +1,11 @@
 package com.genzdevlabs.controller;
 
 import com.genzdevlabs.dto.Car;
-import com.genzdevlabs.dto.tm.CarTM;
 import com.genzdevlabs.model.CarModel;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXComboBox;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -18,14 +14,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import lombok.SneakyThrows;
 
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
-
-import static com.genzdevlabs.model.CarModel.search;
 
 public class ShowAllFormController implements Initializable {
 
@@ -57,16 +50,6 @@ public class ShowAllFormController implements Initializable {
     private TextField txtSearch;
 
 
-
-
-
-
-    @FXML
-    void searchOnAction(ActionEvent event) {
-
-    }
-
-
     void setCellValueFactory() {
         colBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
         colModel.setCellValueFactory(new PropertyValueFactory<>("model"));
@@ -77,7 +60,6 @@ public class ShowAllFormController implements Initializable {
         colColour.setCellValueFactory(new PropertyValueFactory<>("colour"));
     }
 
-    @SneakyThrows
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -107,16 +89,12 @@ public class ShowAllFormController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "Loading Error!!!").show();
         }
     }
+    @FXML
+    void setOnKeyPressed(MouseEvent event) throws SQLException {
+        searchFilter(txtSearch);
+    }
 
-
-
-//    private void setOrderDate() {
-//        lblOrderDate.setText(String.valueOf(LocalDate.now()));
-//    }
-
-
-
-    public void setSearchFilter(TextField search) throws SQLException {
+    public void searchFilter(TextField search) throws SQLException {
         FilteredList<Car> filteredData = new FilteredList<>(tblShowAll.getItems(), b -> true);
 
         search.setOnKeyPressed(keyEvent -> {
@@ -151,6 +129,4 @@ public class ShowAllFormController implements Initializable {
             tblShowAll.setItems(sortedList);
         });
     }
-
-
 }
