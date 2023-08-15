@@ -25,7 +25,7 @@ public class StartScreenForm {
 
     @FXML
     void btnAddCarOnAction(ActionEvent event) throws IOException {
-        Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/AddCarScreenForm.fxml"));
+        Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/AddCarForm.fxml"));
         Scene scene = new Scene(anchorPane);
         Stage stage = new Stage();
         stage.setTitle("Add Cars");
@@ -35,8 +35,14 @@ public class StartScreenForm {
     }
 
     @FXML
-    void btnSearchCarOnAction(ActionEvent event) {
-
+    void btnSearchCarOnAction(ActionEvent event) throws IOException {
+        Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/SellCarForm.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = new Stage();
+        stage.setTitle("Sell Cars");
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.show();
     }
 
     @FXML

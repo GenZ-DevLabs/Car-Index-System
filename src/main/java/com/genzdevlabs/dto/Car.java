@@ -16,5 +16,5 @@ public class Car {
     private String fuel;
     private String capacity;
     private String colour;
-
+    private String status;
 }

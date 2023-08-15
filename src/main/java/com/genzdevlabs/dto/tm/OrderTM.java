@@ -4,17 +4,17 @@ import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
 @Setter
+@Getter
 @ToString
 
-public class CarTM {
+public class OrderTM {
+    private String oid;
+    private String nic;
+    private String reg;
+    private String name;
     private String brand;
     private String model;
-    private String reg;
-    private String year;
-    private String fuel;
-    private String capacity;
     private String colour;
-    private String status;
+    private String date;
 }

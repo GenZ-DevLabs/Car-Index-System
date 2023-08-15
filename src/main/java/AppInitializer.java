@@ -8,7 +8,7 @@ import java.util.Objects;
 public class AppInitializer extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/StartScreenForm.fxml")))));
+        stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/StartForm.fxml")))));
         stage.show();
     }
 }

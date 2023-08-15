@@ -29,7 +29,7 @@ public class AddCarScreenForm implements Initializable {
     private JFXButton btnBack;
 
     @FXML
-    private JFXComboBox<?> comFuel;
+    private JFXComboBox<String> comFuel;
 
     @FXML
     private TextField textCapacity;
@@ -68,16 +68,25 @@ public class AddCarScreenForm implements Initializable {
         String model = txtModel.getText();
         String reg = textReg.getText();
         String year = textYear.getText();
-        String fuelType = (String) comFuel.getValue();
+        String fuelType =  comFuel.getValue();
         String capacity = textCapacity.getText();
         String colour = textColour.getText();
-        var customer = new Car(brand, model, reg, year, fuelType, capacity, colour);
+        String status = "UnSold";
+        var customer = new Car(brand, model, reg, year, fuelType, capacity, colour, status);
 
         try {
             boolean isSaved = CarModel.save(customer);
             if (isSaved){
                 new Alert(Alert.AlertType.CONFIRMATION, "CAR Added Successfully").show();
                 getAll();
+
+                txtModel.setText("");
+                txtBrand.setText("");
+                textReg.setText("");
+                textYear.setText("");
+                comFuel.setValue("");
+                textCapacity.setText("");
+                textColour.setText("");
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

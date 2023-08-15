@@ -60,7 +60,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnSellCar" buttonType="RAISED" layoutX="147.0" layoutY="484.0" onAction="#btnSellCarOnAction" prefHeight="56.0" prefWidth="909.0" style="-fx-background-color: white; -fx-background-radius: 8;" text="Sell Car">
+      <JFXButton fx:id="btnSellCar" buttonType="RAISED" layoutX="147.0" layoutY="484.0" onAction="#AddCustomerOnAction" prefHeight="56.0" prefWidth="909.0" style="-fx-background-color: white; -fx-background-radius: 8;" text="Add Customer">
          <font>
             <Font size="24.0" />
          </font>
