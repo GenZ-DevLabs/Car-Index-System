@@ -9,6 +9,7 @@ public class AppInitializer extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/StartForm.fxml")))));
+        stage.setTitle("Nasimi Autos");
         stage.show();
     }
 }

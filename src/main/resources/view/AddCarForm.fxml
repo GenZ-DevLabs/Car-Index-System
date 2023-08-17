@@ -12,9 +12,9 @@
 
 <AnchorPane fx:id="addVehiclePane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.genzdevlabs.controller.AddCarScreenForm">
     <AnchorPane layoutX="38.0" layoutY="38.0" prefHeight="579.0" prefWidth="1204.0" style="-fx-background-color: #E3E3E3; -fx-border-color: #1F77DE; -fx-border-radius: 8; -fx-border-width: 4;">
-        <Label alignment="CENTER" layoutX="325.0" layoutY="38.0" prefHeight="36.0" prefWidth="626.0" text="ADD VEHICLE TO THE SYSTEM">
+        <Label alignment="CENTER" layoutX="332.0" layoutY="44.0" prefHeight="36.0" prefWidth="548.0" text="ADD VEHICLE TO THE SYSTEM">
             <font>
-                <Font name="System Bold" size="38.0" />
+                <Font name="System Bold" size="28.0" />
             </font>
         </Label>
         <Label layoutX="147.0" layoutY="123.0" prefHeight="26.0" prefWidth="101.35" text="Brand">
@@ -91,7 +91,7 @@
             <Font size="24.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="58.0" fitWidth="70.0" layoutX="290.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="46.0" fitWidth="57.0" layoutX="324.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/car_add_icon.png" />
          </image>

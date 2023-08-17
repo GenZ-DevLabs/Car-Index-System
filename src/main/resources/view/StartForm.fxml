@@ -33,7 +33,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnSearchCar" alignment="CENTER" buttonType="RAISED" layoutX="432.0" layoutY="374.91" onAction="#btnSearchCarOnAction" prefHeight="81.19" prefWidth="415.76" style="-fx-background-color: white; -fx-background-radius: 20;" text="SEARCH CAR">
+      <JFXButton fx:id="btnSellCar" alignment="CENTER" buttonType="RAISED" layoutX="432.0" layoutY="374.91" onAction="#btnSellOnAction" prefHeight="81.19" prefWidth="415.76" style="-fx-background-color: white; -fx-background-radius: 20;" text="SELL CARS">
          <font>
             <Font size="30.0" />
          </font>

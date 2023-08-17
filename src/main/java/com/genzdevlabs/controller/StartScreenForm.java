@@ -18,7 +18,7 @@ public class StartScreenForm {
     private JFXButton btnAddCar;
 
     @FXML
-    private JFXButton btnSearchCar;
+    private JFXButton btnSellCar;
 
     @FXML
     private JFXButton btnShowAll;
@@ -35,7 +35,7 @@ public class StartScreenForm {
     }
 
     @FXML
-    void btnSearchCarOnAction(ActionEvent event) throws IOException {
+    void btnSellOnAction(ActionEvent event) throws IOException {
         Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/SellCarForm.fxml"));
         Scene scene = new Scene(anchorPane);
         Stage stage = new Stage();
