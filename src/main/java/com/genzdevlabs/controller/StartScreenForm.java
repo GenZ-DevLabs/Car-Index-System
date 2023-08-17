@@ -9,21 +9,23 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class StartScreenForm {
     @FXML
-    private AnchorPane addVehicleApane;
+    private AnchorPane addVehiclePane;
 
     @FXML
     private JFXButton btnAddCar;
 
     @FXML
-    private JFXButton btnSearchCar;
+    private JFXButton btnSellCar;
+
+    @FXML
+    private JFXButton btnShowAll;
 
     @FXML
     void btnAddCarOnAction(ActionEvent event) throws IOException {
-        Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/AddCarScreenForm.fxml"));
+        Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/AddCarForm.fxml"));
         Scene scene = new Scene(anchorPane);
         Stage stage = new Stage();
         stage.setTitle("Add Cars");
@@ -33,7 +35,24 @@ public class StartScreenForm {
     }
 
     @FXML
-    void btnSearchCarOnAction(ActionEvent event) {
+    void btnSellOnAction(ActionEvent event) throws IOException {
+        Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/SellCarForm.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = new Stage();
+        stage.setTitle("Sell Cars");
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.show();
+    }
 
+    @FXML
+    void btnShowAllOnAction(ActionEvent event) throws IOException {
+        Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/ShowAllForm.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = new Stage();
+        stage.setTitle("Show All Cars");
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.show();
     }
 }

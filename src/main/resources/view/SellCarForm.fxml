@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="510.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.genzdevlabs.controller.SellCarScreenFormController">
+   <children>
+      <TableView fx:id="tblShowAll" layoutX="250.0" layoutY="100.0" onMouseClicked="#getItemsOnMouseClick" prefHeight="200.0" prefWidth="525.0">
+        <columns>
+          <TableColumn fx:id="colBrand" prefWidth="75.0" text="Brand" />
+          <TableColumn fx:id="colModel" prefWidth="75.0" text="Model" />
+            <TableColumn fx:id="colReg" prefWidth="75.0" text="Reg No" />
+            <TableColumn fx:id="colYear" prefWidth="75.0" text="Year" />
+            <TableColumn fx:id="colFuel" prefWidth="75.0" text="Fuel Type" />
+            <TableColumn fx:id="colCapacity" prefWidth="75.0" text="Capacity" />
+            <TableColumn fx:id="colColour" prefWidth="75.0" text="Colour" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearchCar" layoutX="250.0" layoutY="56.0" onMouseClicked="#setOnKeyPressed" prefHeight="26.0" prefWidth="526.0" promptText="Search" />
+      <TableView fx:id="tblCustomer" layoutX="14.0" layoutY="100.0" onMouseClicked="#getCustomerDetailsOnMouseClick" prefHeight="200.0" prefWidth="226.0">
+        <columns>
+          <TableColumn fx:id="colNic" prefWidth="113.60000324249268" text="NIC" />
+          <TableColumn fx:id="colName" prefWidth="112.0" text="Name" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearchCustomer" layoutX="14.0" layoutY="56.0" onMouseClicked="#searcCustomerOnMouseClick" prefHeight="26.0" prefWidth="226.0" promptText="Search" />
+      <TextField fx:id="txtNic" editable="false" layoutX="13.0" layoutY="314.0" prefHeight="26.0" prefWidth="226.0" promptText="NIC" />
+      <TextField fx:id="txtName" editable="false" layoutX="14.0" layoutY="356.0" prefHeight="26.0" prefWidth="226.0" promptText="Name" />
+      <TextField fx:id="txtColour" editable="false" layoutX="525.0" layoutY="356.0" prefHeight="26.0" prefWidth="250.0" promptText="Colour" />
+      <TextField fx:id="txtBrand" editable="false" layoutX="525.0" layoutY="314.0" prefHeight="26.0" prefWidth="250.0" promptText="Brand" />
+      <TextField fx:id="txtModel" editable="false" layoutX="250.0" layoutY="356.0" prefHeight="26.0" prefWidth="250.0" promptText="Model" />
+      <TextField fx:id="txtReg" editable="false" layoutX="250.0" layoutY="314.0" prefHeight="26.0" prefWidth="250.0" promptText="Reg Number" />
+      <JFXButton fx:id="btnSellCar" buttonType="RAISED" layoutX="247.0" layoutY="415.0" onAction="#SellCarOnAction" prefHeight="50.0" prefWidth="526.0" style="-fx-background-color: White; -fx-background-radius: 15;" text="Sell Car">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAddCustomer" buttonType="RAISED" layoutX="14.0" layoutY="415.0" onAction="#CustomerFormOnAction" prefHeight="50.0" prefWidth="226.0" style="-fx-background-color: White; -fx-background-radius: 15;" text="Add Customer">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="14.0" layoutY="15.0" prefHeight="26.0" prefWidth="68.0" text="Order ID:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="82.0" layoutY="15.0" prefHeight="26.0" prefWidth="159.0" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="296.0" layoutY="15.0" prefHeight="26.0" prefWidth="40.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="336.0" layoutY="15.0" prefHeight="26.0" prefWidth="159.0" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="641.0" layoutY="15.0" prefHeight="26.0" prefWidth="40.0" text="Seller:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="681.0" layoutY="15.0" prefHeight="26.0" prefWidth="92.0" text="Nasimi Autos" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

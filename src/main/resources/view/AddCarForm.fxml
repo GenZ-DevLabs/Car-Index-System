@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addVehiclePane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.genzdevlabs.controller.AddCarScreenForm">
+    <AnchorPane layoutX="38.0" layoutY="38.0" prefHeight="579.0" prefWidth="1204.0" style="-fx-background-color: #E3E3E3; -fx-border-color: #1F77DE; -fx-border-radius: 8; -fx-border-width: 4;">
+        <Label alignment="CENTER" layoutX="332.0" layoutY="44.0" prefHeight="36.0" prefWidth="548.0" text="ADD VEHICLE TO THE SYSTEM">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+        <Label layoutX="147.0" layoutY="123.0" prefHeight="26.0" prefWidth="101.35" text="Brand">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+      <TextField fx:id="txtBrand" layoutX="147.0" layoutY="154.0" prefHeight="46.0" prefWidth="399.0" promptText="brand">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="650.0" layoutY="123.0" prefHeight="26.0" prefWidth="103.13" text="Model">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtModel" layoutX="650.0" layoutY="154.0" prefHeight="46.0" prefWidth="406.0" promptText="model">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="147.0" layoutY="244.0" prefHeight="26.0" prefWidth="247.51" text="Registration No.">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textReg" layoutX="147.0" layoutY="275.0" prefHeight="46.0" prefWidth="399.0" promptText="reg no">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="650.0" layoutY="244.0" prefHeight="26.0" prefWidth="103.13" text="Year">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textYear" layoutX="650.0" layoutY="275.0" prefHeight="46.0" prefWidth="406.0" promptText="yyyy">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="147.0" layoutY="365.0" prefHeight="26.0" prefWidth="232.0" text="Fuel Type">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="comFuel" layoutX="147.0" layoutY="396.0" prefHeight="46.0" prefWidth="242.0" promptText="select fuel type">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <Label layoutX="480.0" layoutY="365.0" prefHeight="26.0" prefWidth="232.0" text="Capacity">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textCapacity" layoutX="480.0" layoutY="396.0" prefHeight="46.0" prefWidth="242.0" promptText="capacity">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="814.0" layoutY="365.0" prefHeight="26.0" prefWidth="232.0" text="Colour">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textColour" layoutX="814.0" layoutY="396.0" prefHeight="46.0" prefWidth="242.0" promptText="colour">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnAddCar" buttonType="RAISED" layoutX="147.0" layoutY="486.0" onAction="#btnAddOnAction" prefHeight="56.0" prefWidth="909.0" style="-fx-background-color: white; -fx-background-radius: 8;" text="Add Car">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="46.0" fitWidth="57.0" layoutX="324.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/car_add_icon.png" />
+         </image>
+      </ImageView>
+    </AnchorPane>
+   <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="189.0" layoutY="643.0" onAction="#btnBackOnAction" prefHeight="49.0" prefWidth="399.0" style="-fx-background-color: white; -fx-background-radius: 8;" text="Back">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </JFXButton>
+</AnchorPane>
