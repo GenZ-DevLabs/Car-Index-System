@@ -34,6 +34,28 @@ public class CarModel {
         return data;
     }
 
+    public static List<Car> getAllUnSold() throws SQLException {
+        Connection con = DataBaseConnection.getInstance().getConnection();
+        String sql = "SELECT * FROM addcar where status= 'UnSold'";
+
+        List<Car> data = new ArrayList<>();
+
+        ResultSet resultSet = con.createStatement().executeQuery(sql);
+        while (resultSet.next()) {
+            data.add(new Car(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getString(5),
+                    resultSet.getString(6),
+                    resultSet.getString(7),
+                    resultSet.getString(8)
+            ));
+        }
+        return data;
+    }
+
     public static boolean save(Car car) throws SQLException {
         String sql = "INSERT INTO addcar (brand, model, reg, year, fuel, capa, colour, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         return CrudUtil.execute(sql, car.getBrand(), car.getModel(), car.getReg(), car.getYear(), car.getFuel(), car.getCapacity(), car.getColour(), car.getStatus());

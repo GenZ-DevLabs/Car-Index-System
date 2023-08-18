@@ -7,6 +7,7 @@ import com.genzdevlabs.model.CarModel;
 import com.genzdevlabs.model.CustomerModel;
 import com.genzdevlabs.model.OrderModel;
 import com.jfoenix.controls.JFXButton;
+import javafx.animation.KeyFrame;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -20,7 +21,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,9 +35,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static com.genzdevlabs.model.CarModel.getAll;
 
 public class SellCarScreenFormController implements Initializable {
+
+    @FXML
+    private AnchorPane orderPane;
 
     @FXML
     private JFXButton btnAddCustomer;
@@ -133,17 +138,20 @@ public class SellCarScreenFormController implements Initializable {
         try {
             boolean isSaved = OrderModel.save(sellCar);
             if (isSaved){
-                new Alert(Alert.AlertType.CONFIRMATION, "CAR Sold Successfully").show();
-                getAll();
+                boolean isUpdated = OrderModel.updateStatus(reg);
+                if(isUpdated){
+                    new Alert(Alert.AlertType.CONFIRMATION, "CAR Sold Successfully").show();
+                    getAll();
 
-//                lblOrderId.setText("");
-//                txtNic.setText("");
-//                t.setText("");
-//                textReg.setText("");
-//                textYear.setText("");
-//                comFuel.setValue("");
-//                textCapacity.setText("");
-//                textColour.setText("");
+                    txtNic.setText("");
+                    txtName.setText("");
+                    txtReg.setText("");
+                    txtBrand.setText("");
+                    txtColour.setText("");
+                    txtModel.setText("");
+
+                    new KeyFrame(Duration.seconds(0.1));
+                }
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -173,7 +181,7 @@ public class SellCarScreenFormController implements Initializable {
         getAll();
         getAll1();
         getDate();
-        lblOrderId.setText("O0000001");
+        generateNextOrderId();
     }
 
     void setCellValueFactory() {
@@ -194,7 +202,7 @@ public class SellCarScreenFormController implements Initializable {
     void getAll() {
         try {
             ObservableList<Car> obList = FXCollections.observableArrayList();
-            List<Car> cusList = CarModel.getAll();
+            List<Car> cusList = CarModel.getAllUnSold();
 
             for (Car car : cusList) {
                 obList.add(new Car(
@@ -318,5 +326,14 @@ public class SellCarScreenFormController implements Initializable {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
         lblDate.setText(formatter.format(date));
+    }
+
+    private void generateNextOrderId() {
+        try {
+            String nextId = OrderModel.generateNextOrderId();
+            lblOrderId.setText(nextId);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

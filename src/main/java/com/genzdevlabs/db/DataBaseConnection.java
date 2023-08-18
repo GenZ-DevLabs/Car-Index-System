@@ -11,7 +11,7 @@ public class DataBaseConnection {
 
     static {
         props.setProperty("user", "root");
-        props.setProperty("password", "1234");
+        props.setProperty("password", "VpnSachitha123@");
     }
 
     private static DataBaseConnection dataBaseConnection;

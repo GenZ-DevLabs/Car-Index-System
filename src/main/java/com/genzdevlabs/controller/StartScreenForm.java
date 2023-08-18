@@ -24,6 +24,20 @@ public class StartScreenForm {
     private JFXButton btnShowAll;
 
     @FXML
+    private JFXButton btnOrderDetail;
+
+    @FXML
+    void OrderDetailOnAction(ActionEvent event) throws IOException {
+        Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/OrderDetailForm.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = new Stage();
+        stage.setTitle("Order Details");
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.show();
+    }
+
+    @FXML
     void btnAddCarOnAction(ActionEvent event) throws IOException {
         Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/AddCarForm.fxml"));
         Scene scene = new Scene(anchorPane);

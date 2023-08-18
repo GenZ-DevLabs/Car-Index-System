@@ -16,7 +16,7 @@ import java.util.List;
 public class OrderModel {
     public static List<OrderTM> getAll() throws SQLException {
         Connection con = DataBaseConnection.getInstance().getConnection();
-        String sql = "SELECT * FROM order";
+        String sql = "SELECT * FROM orders";
 
         List<OrderTM> data = new ArrayList<>();
 
@@ -37,8 +37,13 @@ public class OrderModel {
     }
 
     public static boolean save(OrderTM order) throws SQLException {
-        String sql = "INSERT INTO order (oid, nic, reg, name, brand, model, colour, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO orders (oid, nic, reg, name, brand, model, colour, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         return CrudUtil.execute(sql, order.getOid(), order.getNic(), order.getReg(), order.getName(), order.getBrand(), order.getModel(), order.getColour(), order.getDate());
+    }
+
+    public static boolean updateStatus(String reg) throws SQLException {
+        String sql = "UPDATE addcar SET status='Sold' WHERE reg = ?";
+        return CrudUtil.execute(sql, reg);
     }
 
 //    public static boolean update(Customer customer) throws SQLException {
@@ -83,4 +88,27 @@ public class OrderModel {
 //        }
 //        return null;
 //    }
+
+    public static String generateNextOrderId() throws SQLException {
+        Connection con = DataBaseConnection.getInstance().getConnection();
+
+        String sql = "SELECT oid FROM orders ORDER BY oid DESC LIMIT 1";
+
+        ResultSet resultSet = con.createStatement().executeQuery(sql);
+        if(resultSet.next()) {
+            return splitOrderId(resultSet.getString(1));
+        }
+        return splitOrderId(null);
+    }
+
+    public static String splitOrderId(String currentOrderId) {
+        if(currentOrderId != null) {
+            String[] strings = currentOrderId.split("O");
+            int id = Integer.parseInt(strings[1]);
+            id++;
+
+            return "O00"+id;
+        }
+        return "O001";
+    }
 }
