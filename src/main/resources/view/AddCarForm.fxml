@@ -11,95 +11,93 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="addVehiclePane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.genzdevlabs.controller.AddCarScreenForm">
-    <AnchorPane layoutX="38.0" layoutY="38.0" prefHeight="579.0" prefWidth="1204.0" style="-fx-background-color: #E3E3E3; -fx-border-color: #1F77DE; -fx-border-radius: 8; -fx-border-width: 4;">
-        <Label alignment="CENTER" layoutX="325.0" layoutY="38.0" prefHeight="36.0" prefWidth="626.0" text="ADD VEHICLE TO THE SYSTEM">
+    <AnchorPane layoutX="38.0" layoutY="70.0" prefHeight="579.0" prefWidth="1204.0" style="-fx-background-color: #E3E3E3; -fx-border-color: #1F77DE; -fx-border-radius: 8; -fx-border-width: 4;">
+        <Label alignment="CENTER" layoutX="573.0" layoutY="43.0" prefHeight="47.0" prefWidth="307.0" text="ADD NEW VEHICLE">
             <font>
-                <Font name="System Bold" size="38.0" />
+                <Font name="System Bold" size="32.0" />
             </font>
         </Label>
-        <Label layoutX="147.0" layoutY="123.0" prefHeight="26.0" prefWidth="101.35" text="Brand">
+        <Label layoutX="147.0" layoutY="125.0" prefHeight="30.0" prefWidth="86.0" text="Brand">
             <font>
-                <Font name="System Bold" size="24.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-      <TextField fx:id="txtBrand" layoutX="147.0" layoutY="154.0" prefHeight="46.0" prefWidth="399.0" promptText="brand">
+      <TextField fx:id="txtBrand" layoutX="147.0" layoutY="154.0" prefHeight="46.0" prefWidth="399.0" promptText="brand" style="-fx-background-radius: 16;">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
-      <Label layoutX="650.0" layoutY="123.0" prefHeight="26.0" prefWidth="103.13" text="Model">
+      <Label layoutX="650.0" layoutY="125.0" prefHeight="26.0" prefWidth="103.13" text="Model">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtModel" layoutX="650.0" layoutY="154.0" prefHeight="46.0" prefWidth="406.0" promptText="model">
+      <TextField fx:id="txtModel" layoutX="650.0" layoutY="154.0" prefHeight="46.0" prefWidth="406.0" promptText="model" style="-fx-background-radius: 16;">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
-      <Label layoutX="147.0" layoutY="244.0" prefHeight="26.0" prefWidth="247.51" text="Registration No.">
+      <Label layoutX="147.0" layoutY="244.0" prefHeight="30.0" prefWidth="213.0" text="Registration No.">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="textReg" layoutX="147.0" layoutY="275.0" prefHeight="46.0" prefWidth="399.0" promptText="reg no">
+      <TextField fx:id="textReg" layoutX="147.0" layoutY="275.0" prefHeight="46.0" prefWidth="399.0" promptText="reg no" style="-fx-background-radius: 16;">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
       <Label layoutX="650.0" layoutY="244.0" prefHeight="26.0" prefWidth="103.13" text="Year">
          <font>
-            <Font name="Calibri Bold" size="24.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="textYear" layoutX="650.0" layoutY="275.0" prefHeight="46.0" prefWidth="406.0" promptText="yyyy">
+      <TextField fx:id="textYear" layoutX="650.0" layoutY="275.0" prefHeight="46.0" prefWidth="406.0" promptText="yyyy" style="-fx-background-radius: 16;">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
       <Label layoutX="147.0" layoutY="365.0" prefHeight="26.0" prefWidth="232.0" text="Fuel Type">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <JFXComboBox fx:id="comFuel" layoutX="147.0" layoutY="396.0" prefHeight="46.0" prefWidth="242.0" promptText="select fuel type">
+      <JFXComboBox fx:id="comFuel" focusColor="#ffffff00" layoutX="147.0" layoutY="396.0" prefHeight="46.0" prefWidth="307.0" promptText="   select fuel type" style="-fx-background-color: white; -fx-background-radius: 16;" unFocusColor="#ffffff00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXComboBox>
-      <Label layoutX="480.0" layoutY="365.0" prefHeight="26.0" prefWidth="232.0" text="Capacity">
+      <Label layoutX="480.0" layoutY="365.0" prefHeight="30.0" prefWidth="95.0" text="Capacity">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="textCapacity" layoutX="480.0" layoutY="396.0" prefHeight="46.0" prefWidth="242.0" promptText="capacity">
+      <TextField fx:id="textCapacity" layoutX="480.0" layoutY="396.0" prefHeight="46.0" prefWidth="242.0" promptText="capacity" style="-fx-background-radius: 16;">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
-      <Label layoutX="814.0" layoutY="365.0" prefHeight="26.0" prefWidth="232.0" text="Colour">
+      <Label layoutX="814.0" layoutY="365.0" prefHeight="30.0" prefWidth="103.0" text="Colour">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="textColour" layoutX="814.0" layoutY="396.0" prefHeight="46.0" prefWidth="242.0" promptText="colour">
+      <TextField fx:id="textColour" layoutX="814.0" layoutY="396.0" prefHeight="46.0" prefWidth="242.0" promptText="colour" style="-fx-background-radius: 16;">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
-      <JFXButton fx:id="btnAddCar" buttonType="RAISED" layoutX="147.0" layoutY="486.0" onAction="#btnAddOnAction" prefHeight="56.0" prefWidth="909.0" style="-fx-background-color: white; -fx-background-radius: 8;" text="Add Car">
+      <JFXButton fx:id="btnAddCar" buttonType="RAISED" layoutX="147.0" layoutY="486.0" onAction="#btnAddOnAction" prefHeight="56.0" prefWidth="909.0" style="-fx-background-color: white; -fx-background-radius: 32;" text="Add Car">
          <font>
             <Font size="24.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
-      <ImageView fitHeight="58.0" fitWidth="70.0" layoutX="290.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="46.0" fitWidth="53.0" layoutX="522.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/car_add_icon.png" />
+            <Image url="@../assets/addcar.png" />
          </image>
       </ImageView>
     </AnchorPane>
-   <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="189.0" layoutY="643.0" onAction="#btnBackOnAction" prefHeight="49.0" prefWidth="399.0" style="-fx-background-color: white; -fx-background-radius: 8;" text="Back">
-      <font>
-         <Font size="24.0" />
-      </font>
-   </JFXButton>
 </AnchorPane>

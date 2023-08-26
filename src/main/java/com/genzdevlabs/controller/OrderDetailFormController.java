@@ -90,7 +90,7 @@ public class OrderDetailFormController implements Initializable {
             tblOrderDetails.setItems(obList);
         }catch (SQLException e){
             e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "Loading Error!!!").show();
+            new Alert(Alert.AlertType.ERROR, "Loading error!!!").show();
         }
     }
 

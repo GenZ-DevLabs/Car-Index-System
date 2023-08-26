@@ -26,9 +26,6 @@ public class AddCarScreenForm implements Initializable {
     private JFXButton btnAddCar;
 
     @FXML
-    private JFXButton btnBack;
-
-    @FXML
     private JFXComboBox<String> comFuel;
 
     @FXML
@@ -71,13 +68,13 @@ public class AddCarScreenForm implements Initializable {
         String fuelType =  comFuel.getValue();
         String capacity = textCapacity.getText();
         String colour = textColour.getText();
-        String status = "UnSold";
+        String status = "Unsold";
         var customer = new Car(brand, model, reg, year, fuelType, capacity, colour, status);
 
         try {
             boolean isSaved = CarModel.save(customer);
             if (isSaved){
-                new Alert(Alert.AlertType.CONFIRMATION, "CAR Added Successfully").show();
+                new Alert(Alert.AlertType.CONFIRMATION, "Vehicle added successfully").show();
                 getAll();
 
                 txtModel.setText("");
@@ -91,10 +88,6 @@ public class AddCarScreenForm implements Initializable {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-    }
-
-    @FXML
-    void btnBackOnAction(ActionEvent event) {
     }
 
     @Override

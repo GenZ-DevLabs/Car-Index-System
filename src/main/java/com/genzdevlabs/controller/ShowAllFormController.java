@@ -2,7 +2,6 @@ package com.genzdevlabs.controller;
 
 import com.genzdevlabs.dto.Car;
 import com.genzdevlabs.model.CarModel;
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -60,7 +59,7 @@ public class ShowAllFormController implements Initializable {
     private TextField txtBrand;
 
     @FXML
-    private TextField txtCapa;
+    private TextField txtCapacity;
 
     @FXML
     private TextField txtColour;
@@ -85,7 +84,7 @@ public class ShowAllFormController implements Initializable {
         try {
             boolean isDelete = CarModel.delete(reg);
             if (isDelete){
-                new Alert(Alert.AlertType.CONFIRMATION, "Car Deleted Successfully").show();
+                new Alert(Alert.AlertType.CONFIRMATION, "Vehicle deleted successfully").show();
                 getAll();
 
                 txtModel.setText("");
@@ -93,11 +92,11 @@ public class ShowAllFormController implements Initializable {
                 txtReg.setText("");
                 txtYear.setText("");
                 comFuel.setValue("");
-                txtCapa.setText("");
+                txtCapacity.setText("");
                 txtColour.setText("");
                 txtStatus.setText("");
             }else{
-                new Alert(Alert.AlertType.ERROR,"Delete Error").show();
+                new Alert(Alert.AlertType.ERROR,"Deleting error").show();
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -112,7 +111,7 @@ public class ShowAllFormController implements Initializable {
         String reg = txtReg.getText();
         String year =txtYear.getText();
         String fuel = comFuel.getValue();
-        String capa =txtCapa.getText();
+        String capa = txtCapacity.getText();
         String colour =txtColour.getText();
         String status = txtStatus.getText();
 
@@ -121,7 +120,7 @@ public class ShowAllFormController implements Initializable {
         try {
             boolean isUpdate = CarModel.update(car);
             if (isUpdate){
-                new Alert(Alert.AlertType.CONFIRMATION, "Car Updated Successfully").show();
+                new Alert(Alert.AlertType.CONFIRMATION, "Vehicle updated successfully").show();
                 getAll();
 
                 txtModel.setText("");
@@ -129,7 +128,7 @@ public class ShowAllFormController implements Initializable {
                 txtReg.setText("");
                 txtYear.setText("");
                 comFuel.setValue("");
-                txtCapa.setText("");
+                txtCapacity.setText("");
                 txtColour.setText("");
                 txtStatus.setText("");
             }
@@ -146,7 +145,7 @@ public class ShowAllFormController implements Initializable {
         txtModel.setText(colModel.getCellData(index).toString());
         txtReg.setText(colReg.getCellData(index).toString());
         txtYear.setText(colYear.getCellData(index).toString());
-        txtCapa.setText(colCapacity.getCellData(index).toString());
+        txtCapacity.setText(colCapacity.getCellData(index).toString());
         txtColour.setText(colColour.getCellData(index).toString());
         comFuel.setValue(colFuel.getCellData(index).toString());
         txtStatus.setText(colStatus.getCellData(index).toString());
@@ -201,7 +200,7 @@ public class ShowAllFormController implements Initializable {
             tblShowAll.setItems(obList);
         }catch (SQLException e){
             e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "Loading Error!!!").show();
+            new Alert(Alert.AlertType.ERROR, "Loading error!!!").show();
         }
     }
     @FXML

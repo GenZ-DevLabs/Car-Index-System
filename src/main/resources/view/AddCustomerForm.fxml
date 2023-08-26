@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -9,76 +10,74 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="customerDetailsPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.genzdevlabs.controller.AddCustomerForm">
-    <AnchorPane layoutX="38.0" layoutY="38.0" prefHeight="579.0" prefWidth="1204.0" style="-fx-background-color: #E3E3E3; -fx-border-color: #1F77DE; -fx-border-radius: 8; -fx-border-width: 4;">
-        <Label alignment="CENTER" layoutX="467.0" layoutY="40.0" prefHeight="36.0" prefWidth="365.0" text="CUSTOMER DETAILS">
+    <AnchorPane layoutX="38.0" layoutY="70.0" prefHeight="579.0" prefWidth="1204.0" style="-fx-background-color: #E3E3E3; -fx-border-color: #1F77DE; -fx-border-radius: 8; -fx-border-width: 4;">
+        <Label alignment="CENTER" layoutX="508.0" layoutY="35.0" prefHeight="47.0" prefWidth="343.0" text="ADD NEW CUSTOMER">
             <font>
-                <Font name="System Bold" size="38.0" />
+                <Font name="System Bold" size="32.0" />
             </font>
         </Label>
-        <Label layoutX="147.0" layoutY="121.0" prefHeight="35.0" prefWidth="129.0" text="Full Name">
+        <Label layoutX="147.0" layoutY="118.0" prefHeight="35.0" prefWidth="129.0" text="Full Name">
             <font>
-                <Font name="System Bold" size="24.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-      <TextField fx:id="textName" layoutX="147.0" layoutY="152.0" prefHeight="46.0" prefWidth="399.0" promptText="John Doe">
+      <TextField fx:id="textName" layoutX="147.0" layoutY="152.0" prefHeight="46.0" prefWidth="399.0" promptText="John Doe" style="-fx-background-radius: 16;">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
-      <Label layoutX="650.0" layoutY="121.0" prefHeight="26.0" prefWidth="103.13" text="NIC">
+      <Label layoutX="650.0" layoutY="120.0" prefHeight="26.0" prefWidth="103.13" text="NIC">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="textNIC" layoutX="650.0" layoutY="152.0" prefHeight="46.0" prefWidth="406.0" promptText="123456789101">
+      <TextField fx:id="textNIC" layoutX="650.0" layoutY="152.0" prefHeight="46.0" prefWidth="406.0" promptText="123456789101" style="-fx-background-radius: 16;">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
-      <Label layoutX="147.0" layoutY="240.0" prefHeight="26.0" prefWidth="247.51" text="Mobile Number">
+      <Label layoutX="147.0" layoutY="242.0" prefHeight="26.0" prefWidth="247.51" text="Mobile Number">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="textPhoneNumber" layoutX="147.0" layoutY="273.0" prefHeight="46.0" prefWidth="399.0" promptText="074 525 4565">
+      <TextField fx:id="textPhoneNumber" layoutX="147.0" layoutY="273.0" prefHeight="46.0" prefWidth="399.0" promptText="074 525 4565" style="-fx-background-radius: 16;">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
       <Label layoutX="650.0" layoutY="242.0" prefHeight="26.0" prefWidth="103.13" text="Email">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="textEmail" layoutX="650.0" layoutY="273.0" prefHeight="46.0" prefWidth="406.0" promptText="johndoe@example.com">
+      <TextField fx:id="textEmail" layoutX="650.0" layoutY="273.0" prefHeight="46.0" prefWidth="406.0" promptText="johndoe@example.com" style="-fx-background-radius: 16;">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
-      <Label layoutX="147.0" layoutY="363.0" prefHeight="26.0" prefWidth="232.0" text="Address">
+      <Label layoutX="147.0" layoutY="367.0" prefHeight="26.0" prefWidth="232.0" text="Address">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnSellCar" buttonType="RAISED" layoutX="147.0" layoutY="484.0" onAction="#AddCustomerOnAction" prefHeight="56.0" prefWidth="909.0" style="-fx-background-color: white; -fx-background-radius: 8;" text="Add Customer">
+      <JFXButton fx:id="btnAddCustomer" buttonType="RAISED" layoutX="147.0" layoutY="484.0" onAction="#AddCustomerOnAction" prefHeight="56.0" prefWidth="909.0" style="-fx-background-color: white; -fx-background-radius: 32;" text="Add Customer">
          <font>
             <Font size="24.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
-      <ImageView fitHeight="58.0" fitWidth="70.0" layoutX="360.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="459.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/customer_add_icon.png" />
+            <Image url="@../assets/addcutomer.png" />
          </image>
       </ImageView>
-      <TextField fx:id="textAddress" layoutX="147.0" layoutY="398.0" prefHeight="46.0" prefWidth="909.0" promptText="51/5 Gothami Road, Colombo 08">
+      <TextField fx:id="textAddress" layoutX="147.0" layoutY="398.0" prefHeight="46.0" prefWidth="909.0" promptText="51/5 Gothami Road, Colombo 08" style="-fx-background-radius: 16;">
          <font>
-            <Font size="20.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
     </AnchorPane>
-   <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="189.0" layoutY="643.0" onAction="#btnBackOnAction" prefHeight="49.0" prefWidth="399.0" style="-fx-background-color: white; -fx-background-radius: 8;" text="Back">
-      <font>
-         <Font size="24.0" />
-      </font>
-   </JFXButton>
 </AnchorPane>

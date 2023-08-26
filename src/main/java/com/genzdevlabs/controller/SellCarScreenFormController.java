@@ -29,8 +29,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -140,7 +138,7 @@ public class SellCarScreenFormController implements Initializable {
             if (isSaved){
                 boolean isUpdated = OrderModel.updateStatus(reg);
                 if(isUpdated){
-                    new Alert(Alert.AlertType.CONFIRMATION, "CAR Sold Successfully").show();
+                    new Alert(Alert.AlertType.CONFIRMATION, "Vehicle sold successfully").show();
                     getAll();
 
                     txtNic.setText("");
@@ -219,7 +217,7 @@ public class SellCarScreenFormController implements Initializable {
             tblShowAll.setItems(obList);
         }catch (SQLException e){
             e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "Loading Error!!!").show();
+            new Alert(Alert.AlertType.ERROR, "Loading error!!!").show();
         }
     }
 
@@ -240,7 +238,7 @@ public class SellCarScreenFormController implements Initializable {
             tblCustomer.setItems(obList);
         }catch (SQLException e){
             e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "Loading Error!!!").show();
+            new Alert(Alert.AlertType.ERROR, "Loading error!!!").show();
         }
     }
 
@@ -281,7 +279,7 @@ public class SellCarScreenFormController implements Initializable {
     }
 
     @FXML
-    void searcCustomerOnMouseClick(MouseEvent event) throws SQLException {
+    void searchCustomerOnMouseClick(MouseEvent event) throws SQLException {
         searchFilterCustomer(txtSearchCustomer);
     }
 

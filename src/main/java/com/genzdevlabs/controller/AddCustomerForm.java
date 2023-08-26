@@ -1,8 +1,6 @@
 package com.genzdevlabs.controller;
 
-import com.genzdevlabs.dto.Car;
 import com.genzdevlabs.dto.Customer;
-import com.genzdevlabs.model.CarModel;
 import com.genzdevlabs.model.CustomerModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -20,10 +18,7 @@ import static com.genzdevlabs.model.CarModel.getAll;
 
 public class AddCustomerForm implements Initializable {
     @FXML
-    private JFXButton btnBack;
-
-    @FXML
-    private JFXButton btnSellCar;
+    private JFXButton btnAddCustomer;
 
     @FXML
     private AnchorPane customerDetailsPane;
@@ -44,11 +39,6 @@ public class AddCustomerForm implements Initializable {
     private TextField textPhoneNumber;
 
     @FXML
-    void btnBackOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
     void AddCustomerOnAction(ActionEvent event) {
         String nic = textNIC.getText();
         String name = textName.getText();
@@ -60,7 +50,7 @@ public class AddCustomerForm implements Initializable {
         try {
             boolean isSaved = CustomerModel.save(customer);
             if (isSaved){
-                new Alert(Alert.AlertType.CONFIRMATION, "Customer Added Successfully").show();
+                new Alert(Alert.AlertType.CONFIRMATION, "Customer added successfully").show();
                 getAll();
 
                 textNIC.setText("");

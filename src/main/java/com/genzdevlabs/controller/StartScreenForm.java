@@ -42,7 +42,7 @@ public class StartScreenForm {
         Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/AddCarForm.fxml"));
         Scene scene = new Scene(anchorPane);
         Stage stage = new Stage();
-        stage.setTitle("Add Cars");
+        stage.setTitle("Add Vehicles");
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.show();
@@ -53,7 +53,7 @@ public class StartScreenForm {
         Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/SellCarForm.fxml"));
         Scene scene = new Scene(anchorPane);
         Stage stage = new Stage();
-        stage.setTitle("Sell Cars");
+        stage.setTitle("Sell Vehicles");
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.show();
@@ -64,7 +64,7 @@ public class StartScreenForm {
         Parent anchorPane = FXMLLoader.load(getClass().getResource("/view/ShowAllForm.fxml"));
         Scene scene = new Scene(anchorPane);
         Stage stage = new Stage();
-        stage.setTitle("Show All Cars");
+        stage.setTitle("Show All Vehicles");
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.show();

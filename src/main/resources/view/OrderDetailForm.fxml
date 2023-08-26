@@ -1,25 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.genzdevlabs.controller.OrderDetailFormController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.genzdevlabs.controller.OrderDetailFormController">
    <children>
-      <TableView fx:id="tblOrderDetails" layoutX="14.0" layoutY="111.0" prefHeight="200.0" prefWidth="999.0">
-        <columns>
-          <TableColumn fx:id="colOid" prefWidth="75.0" text="Order ID" />
-          <TableColumn fx:id="colNic" prefWidth="135.0" text="NIC" />
-            <TableColumn fx:id="colReg" prefWidth="103.0" text="REG" />
-            <TableColumn fx:id="colName" prefWidth="169.0" text="Name" />
-            <TableColumn fx:id="colBrand" prefWidth="106.0" text="Brand" />
-            <TableColumn fx:id="colModel" prefWidth="139.0" text="Model" />
-            <TableColumn fx:id="colColour" prefWidth="151.0" text="Colour" />
-            <TableColumn fx:id="colDate" prefWidth="120.0" text="Date" />
-        </columns>
-      </TableView>
-      <TextField fx:id="txtSearch" layoutX="14.0" layoutY="36.0" onMouseClicked="#SearchOnMouseClick" prefHeight="26.0" prefWidth="270.0" promptText="Search by Order ID" />
+      <AnchorPane layoutX="24.0" layoutY="30.0" prefHeight="660.0" prefWidth="1205.0" style="-fx-background-color: #E3E3E3; -fx-border-color: #1F77DE; -fx-border-radius: 8; -fx-border-width: 4;">
+         <children>
+            <TableView fx:id="tblOrderDetails" layoutX="15.0" layoutY="146.0" prefHeight="483.0" prefWidth="1175.0">
+              <columns>
+                <TableColumn fx:id="colOid" prefWidth="132.00003337860107" text="Order ID" />
+                <TableColumn fx:id="colNic" prefWidth="190.3999786376953" text="NIC" />
+                  <TableColumn fx:id="colReg" prefWidth="118.39996337890625" text="Reg. No" />
+                  <TableColumn fx:id="colName" prefWidth="231.19998168945312" text="Name" />
+                  <TableColumn fx:id="colBrand" prefWidth="142.40008544921875" text="Brand" />
+                  <TableColumn fx:id="colModel" prefWidth="128.0" text="Model" />
+                  <TableColumn fx:id="colColour" minWidth="0.0" prefWidth="110.39996337890625" text="Colour" />
+                  <TableColumn fx:id="colDate" prefWidth="118.400146484375" text="Date" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtSearch" layoutX="14.0" layoutY="98.0" onMouseClicked="#SearchOnMouseClick" prefHeight="38.0" prefWidth="1175.0" promptText="Search by Order ID" style="-fx-background-radius: 32;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="494.0" layoutY="33.0" prefHeight="47.0" prefWidth="265.0" text="ORDER DETAILS">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="45.0" fitWidth="58.0" layoutX="446.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/orderdetails.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
