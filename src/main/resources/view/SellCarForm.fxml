@@ -68,11 +68,17 @@
                <font>
                   <Font size="20.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </JFXButton>
             <JFXButton fx:id="btnAddCustomer" buttonType="RAISED" layoutX="35.0" layoutY="556.0" onAction="#CustomerFormOnAction" prefHeight="50.0" prefWidth="370.0" style="-fx-background-color: White; -fx-background-radius: 15;" text="Add Customer">
                <font>
                   <Font size="20.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </JFXButton>
             <Label layoutX="35.0" layoutY="128.0" prefHeight="26.0" prefWidth="68.0" text="Order ID:">
                <font>
